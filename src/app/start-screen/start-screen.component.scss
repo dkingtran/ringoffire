@@ -1,0 +1,34 @@
+@import '../../styles.scss';
+
+.start-screen {
+    @include fullvh();
+    width: 100vw;
+    max-width: 100%;
+    background-color: #404040;
+    @include center-flex;
+
+    img {
+        @include fullvh();
+    }
+}
+
+.start-label-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+
+    img {
+        width: 40vw;
+        height: auto;
+
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+}
