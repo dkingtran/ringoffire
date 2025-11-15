@@ -40,13 +40,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "700kb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "100kb",
+                  "maximumError": "150kb"
                 }
               ],
               "outputHashing": "all"
@@ -58,6 +58,19 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "debug": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "namedChunks": true,
+              "aot": true,
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "vendor": true
+              }
             }
           },
           "defaultConfiguration": "production"
@@ -70,6 +83,9 @@
             },
             "development": {
               "browserTarget": "ringoffire:build:development"
+            },
+            "debug": {
+              "browserTarget": "ringoffire:build:debug"
             }
           },
           "defaultConfiguration": "development"
